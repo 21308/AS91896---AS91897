@@ -12,14 +12,19 @@ print("Your total budget is: $", budget)
 
 # Ask user for their inputs
 print("Could you please list the product name so that we can help you?\n")
-# Ask for the product
-product_name = input ("Product Name:\n")
-# Ask for the weight of the product.
-print("Could you please list the weight so that we can help you?\n")
-weight = input ("Weight(kg)\n")
-# Ask for the cost of the product.
-print("Could you please list the cost of the item so that we can help you?\n")
-cost = input ("Cost:\n")
+while True:
+    # Ask for the product
+    product_name = input ("Product Name:\n")
+    if product_name == 'xxx':
+        break
+    # Ask for the weight of the product.
+    print("Could you please list the weight so that we can help you?\n")
+    weight = float(input ("Weight(kg)\n"))
+    # Ask for the cost of the product.
+    print("Could you please list the cost of the item so that we can help you?\n")
+    cost = int(input ("Cost($):\n"))
+    cost_per_kg=cost/weight
+
 
 
 
