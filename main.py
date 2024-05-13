@@ -25,6 +25,9 @@ while True:
     cost = int(input ("Cost($):\n"))
     cost_per_kg=cost/weight
 
+    thislist = [(product_name), (weight), (cost)]
+    print(thislist)
+
 
 
 
