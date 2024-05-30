@@ -31,6 +31,17 @@ while True:
     }
 print(thisdict)
 
+items = [ 'product_name', 'cost_per_kg']
+
+import operator
+items = sorted(items, key=operator.itemgetter(2))
+for i in range (len(items)):
+    items[i] = items[i][:2]
+
+
+
+
+
 
 
 
