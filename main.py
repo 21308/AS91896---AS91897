@@ -8,10 +8,14 @@ while not budget.isnumeric():
     budget = input("What is your budget?")
 budget = int(budget)
 
+thisdict={}
+
+
 print("Your total budget is: $", budget)
 
 # Ask user for their inputs
-print("Could you please list the product name so that we can help you?\n")
+print("Could you please list the product name so that we can help you?"
+      " Or type xxx to quit")
 while True:
     # Ask for the product
     product_name = input ("Product Name:\n")
@@ -25,24 +29,19 @@ while True:
     cost = int(input ("Cost($):\n"))
     cost_per_kg=cost/weight
 
-    thisdict = {
-        product_name : cost_per_kg,
-        
-    }
+
+    # Storing users input in a dictionary
+    new_product = {product_name:cost_per_kg}
+    thisdict.update(new_product)
+
+
 print(thisdict)
 
-thisdict.append(product_name)
+
+dict(sorted(x.items(), key=lambda item: item[1]))
+{0: 0, 2: 1, 1: 2, 4: 3, 3: 4}
 
 
-
-items = [ 'product_name', 'cost_per_kg']
-
-import operator
-items = sorted(items, key=operator.itemgetter(2))
-for i in range (len(items)):
-    items[i] = items[i][:2]
-
-    
 
 
 
