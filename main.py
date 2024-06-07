@@ -30,27 +30,18 @@ while True:
     cost_per_kg=cost/weight
 
 
-    # Storing users input in a dictionary
+# Storing users input in a dictionary
     new_product = {product_name:cost_per_kg}
     thisdict.update(new_product)
 
 
 print(thisdict)
 
-
-dict(sorted(x.items(), key=lambda item: item[1]))
-{0: 0, 2: 1, 1: 2, 4: 3, 3: 4}
-
-
+# Sorted Dictionary
+sorted_dict=dict(sorted(thisdict.items(), key=lambda item: item[1]))
+print(sorted_dict)
 
 
+# Recommending user the most suitable item from their inputs
 
-
-
-
-
-
-
-
-
-   
+cheapest_price = sorted_dict.items()
